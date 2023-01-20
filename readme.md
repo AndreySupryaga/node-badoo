@@ -5,11 +5,11 @@
 This is Badoo website Bot for auto liker photo all users.
 
 The Bot is fully automated.
-You only need to configure the configuration file `config.env`
+You only need to change the values on file `index.js`
 
 ```sh
-LOGIN=YOUR_LOGIN
-PASSWORD=YOUR_PASS
+line 18 - LOGIN => YOUR_LOGIN
+line 19 - PASSWORD => YOUR_PASS
 ```
 
 ## Start

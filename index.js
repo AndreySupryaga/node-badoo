@@ -15,8 +15,8 @@ dotenv.config({ path: './config.env' });
   const page = await browser.newPage();
   page.setDefaultTimeout(0);
   await page.goto('https://badoo.com/signin/?f=top');
-  await page.type('.js-signin-login', login);
-  await page.type('.js-signin-password', pass);
+  await page.$eval('.js-signin-login', el => el.value = 'LOGIN');
+  await page.$eval('.js-signin-password', el => el.value = 'PASSWORD');
   await page.click('.btn--block');
   while (true) {
     await page.waitForSelector('.js-profile-header-vote-yes');
@@ -45,8 +45,8 @@ dotenv.config({ path: './config.env' });
     if (profileAboutMe) {
       await page.screenshot({
         path: `./data/photo/${profileName}-${profileAge.replace(
-          /,\s/,
-          ""
+            /,\s/,
+            ""
         )}-${Date.now()}.png`,
         type: "png",
       });
