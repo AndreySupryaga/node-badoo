@@ -33,11 +33,11 @@ https://nodejs.org/en/
 
 # RU
 
-Автолайк бот для сайта знакомств Badoo. Для работы нужно заполнить `config.env`
+Автолайк бот для сайта знакомств Badoo. Для работы нужно поменять логин и пароль в файле `index.js`
 
 ```sh
-LOGIN=YOUR_LOGIN
-PASSWORD=YOUR_PASS
+line 18 - LOGIN => YOUR_LOGIN
+line 19 - PASSWORD => YOUR_PASS
 ```
 
 Для запуска необходимо открыть консоль и ввести последовательно команды
